@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  - job_name: attrition-api
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+          - attrition-api.employee-attrition.svc.cluster.local:8000

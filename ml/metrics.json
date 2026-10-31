@@ -1,0 +1,270 @@
+{
+  "best_model": "logistic_regression",
+  "selection_metric": "f1_attrition",
+  "selection_tie_breakers": [
+    "recall_attrition",
+    "roc_auc"
+  ],
+  "selection_reason": "Selected logistic_regression because it has the best minority-class performance. Primary metric is F1 on Attrition=Yes (0.4848), with Attrition recall (0.6809) and ROC-AUC (0.8144) as tie-breakers. Accuracy was not the selection metric. random_forest has Attrition F1 0.2727, Attrition recall 0.1915, and ROC-AUC 0.8027.",
+  "positive_class": "Yes",
+  "random_state": 42,
+  "model_card": {
+    "algorithm": "logistic_regression",
+    "target": "Attrition",
+    "positive_class": "Yes",
+    "class_weight": "balanced",
+    "preprocessing": [
+      "median imputation for numerical features",
+      "most-frequent imputation for categorical features",
+      "standard scaling for numerical features",
+      "one-hot encoding for categorical features"
+    ],
+    "random_state": 42,
+    "fit_on": "training split only"
+  },
+  "split": {
+    "test_size": 0.2,
+    "train_rows": 1176,
+    "test_rows": 294,
+    "train_attrition_yes": 190,
+    "test_attrition_yes": 47,
+    "train_attrition_no": 986,
+    "test_attrition_no": 247
+  },
+  "class_balance": {
+    "Yes": 237,
+    "No": 1233,
+    "attrition_percentage": 16.1224
+  },
+  "metrics": {
+    "accuracy": 0.768707,
+    "precision": 0.376471,
+    "recall": 0.680851,
+    "f1_score": 0.484848,
+    "roc_auc": 0.814368,
+    "precision_attrition": 0.376471,
+    "recall_attrition": 0.680851,
+    "f1_attrition": 0.484848,
+    "precision_retention": 0.92823,
+    "recall_retention": 0.785425,
+    "f1_retention": 0.850877
+  },
+  "confusion_matrix": {
+    "labels": [
+      "No",
+      "Yes"
+    ],
+    "rows": "actual",
+    "columns": "predicted",
+    "matrix": [
+      [
+        194,
+        53
+      ],
+      [
+        15,
+        32
+      ]
+    ]
+  },
+  "classification_report": {
+    "No": {
+      "precision": 0.92823,
+      "recall": 0.785425,
+      "f1-score": 0.850877,
+      "support": 247.0
+    },
+    "Yes": {
+      "precision": 0.376471,
+      "recall": 0.680851,
+      "f1-score": 0.484848,
+      "support": 47.0
+    },
+    "accuracy": 0.768707,
+    "macro avg": {
+      "precision": 0.65235,
+      "recall": 0.733138,
+      "f1-score": 0.667863,
+      "support": 294.0
+    },
+    "weighted avg": {
+      "precision": 0.840023,
+      "recall": 0.768707,
+      "f1-score": 0.792362,
+      "support": 294.0
+    }
+  },
+  "feature_importance_source": "random_forest_impurity",
+  "feature_importance_note": "Importances are global Random Forest impurity scores, summed across one-hot columns back to the original feature. They are not causal effects and they are not an explanation of one employee.",
+  "feature_importance_top5": [
+    {
+      "feature": "MonthlyIncome",
+      "importance": 0.077981
+    },
+    {
+      "feature": "Age",
+      "importance": 0.071833
+    },
+    {
+      "feature": "OverTime",
+      "importance": 0.068641
+    },
+    {
+      "feature": "TotalWorkingYears",
+      "importance": 0.059636
+    },
+    {
+      "feature": "JobRole",
+      "importance": 0.054103
+    }
+  ],
+  "feature_importance": [
+    {
+      "feature": "MonthlyIncome",
+      "importance": 0.077981
+    },
+    {
+      "feature": "Age",
+      "importance": 0.071833
+    },
+    {
+      "feature": "OverTime",
+      "importance": 0.068641
+    },
+    {
+      "feature": "TotalWorkingYears",
+      "importance": 0.059636
+    },
+    {
+      "feature": "JobRole",
+      "importance": 0.054103
+    },
+    {
+      "feature": "YearsAtCompany",
+      "importance": 0.053584
+    },
+    {
+      "feature": "DistanceFromHome",
+      "importance": 0.048325
+    },
+    {
+      "feature": "YearsWithCurrManager",
+      "importance": 0.04564
+    },
+    {
+      "feature": "NumCompaniesWorked",
+      "importance": 0.042505
+    },
+    {
+      "feature": "StockOptionLevel",
+      "importance": 0.038633
+    },
+    {
+      "feature": "YearsInCurrentRole",
+      "importance": 0.036604
+    },
+    {
+      "feature": "PercentSalaryHike",
+      "importance": 0.034522
+    },
+    {
+      "feature": "MaritalStatus",
+      "importance": 0.034394
+    },
+    {
+      "feature": "JobSatisfaction",
+      "importance": 0.031819
+    },
+    {
+      "feature": "JobLevel",
+      "importance": 0.03154
+    },
+    {
+      "feature": "EnvironmentSatisfaction",
+      "importance": 0.030916
+    },
+    {
+      "feature": "EducationField",
+      "importance": 0.030456
+    },
+    {
+      "feature": "RelationshipSatisfaction",
+      "importance": 0.026947
+    },
+    {
+      "feature": "BusinessTravel",
+      "importance": 0.026275
+    },
+    {
+      "feature": "Department",
+      "importance": 0.02457
+    },
+    {
+      "feature": "YearsSinceLastPromotion",
+      "importance": 0.024538
+    },
+    {
+      "feature": "TrainingTimesLastYear",
+      "importance": 0.022727
+    },
+    {
+      "feature": "WorkLifeBalance",
+      "importance": 0.022536
+    },
+    {
+      "feature": "Education",
+      "importance": 0.020414
+    },
+    {
+      "feature": "JobInvolvement",
+      "importance": 0.018816
+    },
+    {
+      "feature": "Gender",
+      "importance": 0.017807
+    },
+    {
+      "feature": "PerformanceRating",
+      "importance": 0.004239
+    }
+  ],
+  "dropped_columns": [
+    "EmployeeNumber",
+    "EmployeeCount",
+    "Over18",
+    "StandardHours",
+    "DailyRate",
+    "HourlyRate",
+    "MonthlyRate"
+  ],
+  "feature_columns": [
+    "Age",
+    "BusinessTravel",
+    "Department",
+    "DistanceFromHome",
+    "Education",
+    "EducationField",
+    "EnvironmentSatisfaction",
+    "Gender",
+    "JobInvolvement",
+    "JobLevel",
+    "JobRole",
+    "JobSatisfaction",
+    "MaritalStatus",
+    "MonthlyIncome",
+    "NumCompaniesWorked",
+    "OverTime",
+    "PercentSalaryHike",
+    "PerformanceRating",
+    "RelationshipSatisfaction",
+    "StockOptionLevel",
+    "TotalWorkingYears",
+    "TrainingTimesLastYear",
+    "WorkLifeBalance",
+    "YearsAtCompany",
+    "YearsInCurrentRole",
+    "YearsSinceLastPromotion",
+    "YearsWithCurrManager"
+  ],
+  "eda_summary_file": "ml\\eda_summary.json"
+}

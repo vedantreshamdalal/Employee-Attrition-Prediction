@@ -1,0 +1,6 @@
+# kubectl path for the application namespace.
+# If you use Terraform, do not also apply this file. Terraform creates the same namespace.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: employee-attrition

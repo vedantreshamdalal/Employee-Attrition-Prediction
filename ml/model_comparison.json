@@ -1,0 +1,132 @@
+{
+  "random_state": 42,
+  "test_size": 0.2,
+  "positive_class": "Yes",
+  "selection_metric": "f1_attrition",
+  "tie_breakers": [
+    "recall_attrition",
+    "roc_auc"
+  ],
+  "best_model": "logistic_regression",
+  "selection_reason": "Selected logistic_regression because it has the best minority-class performance. Primary metric is F1 on Attrition=Yes (0.4848), with Attrition recall (0.6809) and ROC-AUC (0.8144) as tie-breakers. Accuracy was not the selection metric. random_forest has Attrition F1 0.2727, Attrition recall 0.1915, and ROC-AUC 0.8027.",
+  "models": [
+    {
+      "name": "logistic_regression",
+      "accuracy": 0.768707,
+      "precision": 0.376471,
+      "recall": 0.680851,
+      "f1_score": 0.484848,
+      "roc_auc": 0.814368,
+      "precision_attrition": 0.376471,
+      "recall_attrition": 0.680851,
+      "f1_attrition": 0.484848,
+      "precision_retention": 0.92823,
+      "recall_retention": 0.785425,
+      "f1_retention": 0.850877,
+      "confusion_matrix": {
+        "labels": [
+          "No",
+          "Yes"
+        ],
+        "rows": "actual",
+        "columns": "predicted",
+        "matrix": [
+          [
+            194,
+            53
+          ],
+          [
+            15,
+            32
+          ]
+        ]
+      },
+      "classification_report": {
+        "No": {
+          "precision": 0.92823,
+          "recall": 0.785425,
+          "f1-score": 0.850877,
+          "support": 247.0
+        },
+        "Yes": {
+          "precision": 0.376471,
+          "recall": 0.680851,
+          "f1-score": 0.484848,
+          "support": 47.0
+        },
+        "accuracy": 0.768707,
+        "macro avg": {
+          "precision": 0.65235,
+          "recall": 0.733138,
+          "f1-score": 0.667863,
+          "support": 294.0
+        },
+        "weighted avg": {
+          "precision": 0.840023,
+          "recall": 0.768707,
+          "f1-score": 0.792362,
+          "support": 294.0
+        }
+      }
+    },
+    {
+      "name": "random_forest",
+      "accuracy": 0.836735,
+      "precision": 0.473684,
+      "recall": 0.191489,
+      "f1_score": 0.272727,
+      "roc_auc": 0.802653,
+      "precision_attrition": 0.473684,
+      "recall_attrition": 0.191489,
+      "f1_attrition": 0.272727,
+      "precision_retention": 0.861818,
+      "recall_retention": 0.959514,
+      "f1_retention": 0.908046,
+      "confusion_matrix": {
+        "labels": [
+          "No",
+          "Yes"
+        ],
+        "rows": "actual",
+        "columns": "predicted",
+        "matrix": [
+          [
+            237,
+            10
+          ],
+          [
+            38,
+            9
+          ]
+        ]
+      },
+      "classification_report": {
+        "No": {
+          "precision": 0.861818,
+          "recall": 0.959514,
+          "f1-score": 0.908046,
+          "support": 247.0
+        },
+        "Yes": {
+          "precision": 0.473684,
+          "recall": 0.191489,
+          "f1-score": 0.272727,
+          "support": 47.0
+        },
+        "accuracy": 0.836735,
+        "macro avg": {
+          "precision": 0.667751,
+          "recall": 0.575502,
+          "f1-score": 0.590387,
+          "support": 294.0
+        },
+        "weighted avg": {
+          "precision": 0.79977,
+          "recall": 0.836735,
+          "f1-score": 0.806481,
+          "support": 294.0
+        }
+      }
+    }
+  ]
+}

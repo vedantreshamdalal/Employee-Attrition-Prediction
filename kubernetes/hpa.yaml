@@ -1,0 +1,22 @@
+# Optional. Apply only after metrics-server is working:
+# minikube addons enable metrics-server
+# kubectl top pods -n employee-attrition
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: attrition-api
+  namespace: employee-attrition
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: attrition-api
+  minReplicas: 1
+  maxReplicas: 3
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 70

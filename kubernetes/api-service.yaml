@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: attrition-api
+  namespace: employee-attrition
+  labels:
+    app: attrition-api
+spec:
+  type: ClusterIP
+  selector:
+    app: attrition-api
+  ports:
+    - name: http
+      port: 8000
+      targetPort: http

@@ -1,0 +1,288 @@
+{
+  "rows": 1470,
+  "columns": 35,
+  "missing_values": 0,
+  "missing_by_column": {},
+  "attrition_counts": {
+    "No": 1233,
+    "Yes": 237
+  },
+  "attrition_percentage": 16.1224,
+  "removed_columns": [
+    "EmployeeNumber",
+    "EmployeeCount",
+    "Over18",
+    "StandardHours",
+    "DailyRate",
+    "HourlyRate",
+    "MonthlyRate"
+  ],
+  "numerical_summary": {
+    "Age": {
+      "mean": 36.924,
+      "std": 9.135,
+      "min": 18.0,
+      "max": 60.0
+    },
+    "DistanceFromHome": {
+      "mean": 9.193,
+      "std": 8.107,
+      "min": 1.0,
+      "max": 29.0
+    },
+    "Education": {
+      "mean": 2.913,
+      "std": 1.024,
+      "min": 1.0,
+      "max": 5.0
+    },
+    "EnvironmentSatisfaction": {
+      "mean": 2.722,
+      "std": 1.093,
+      "min": 1.0,
+      "max": 4.0
+    },
+    "JobInvolvement": {
+      "mean": 2.73,
+      "std": 0.712,
+      "min": 1.0,
+      "max": 4.0
+    },
+    "JobLevel": {
+      "mean": 2.064,
+      "std": 1.107,
+      "min": 1.0,
+      "max": 5.0
+    },
+    "JobSatisfaction": {
+      "mean": 2.729,
+      "std": 1.103,
+      "min": 1.0,
+      "max": 4.0
+    },
+    "MonthlyIncome": {
+      "mean": 6502.931,
+      "std": 4707.957,
+      "min": 1009.0,
+      "max": 19999.0
+    },
+    "NumCompaniesWorked": {
+      "mean": 2.693,
+      "std": 2.498,
+      "min": 0.0,
+      "max": 9.0
+    },
+    "PercentSalaryHike": {
+      "mean": 15.21,
+      "std": 3.66,
+      "min": 11.0,
+      "max": 25.0
+    },
+    "PerformanceRating": {
+      "mean": 3.154,
+      "std": 0.361,
+      "min": 3.0,
+      "max": 4.0
+    },
+    "RelationshipSatisfaction": {
+      "mean": 2.712,
+      "std": 1.081,
+      "min": 1.0,
+      "max": 4.0
+    },
+    "StockOptionLevel": {
+      "mean": 0.794,
+      "std": 0.852,
+      "min": 0.0,
+      "max": 3.0
+    },
+    "TotalWorkingYears": {
+      "mean": 11.28,
+      "std": 7.781,
+      "min": 0.0,
+      "max": 40.0
+    },
+    "TrainingTimesLastYear": {
+      "mean": 2.799,
+      "std": 1.289,
+      "min": 0.0,
+      "max": 6.0
+    },
+    "WorkLifeBalance": {
+      "mean": 2.761,
+      "std": 0.706,
+      "min": 1.0,
+      "max": 4.0
+    },
+    "YearsAtCompany": {
+      "mean": 7.008,
+      "std": 6.127,
+      "min": 0.0,
+      "max": 40.0
+    },
+    "YearsInCurrentRole": {
+      "mean": 4.229,
+      "std": 3.623,
+      "min": 0.0,
+      "max": 18.0
+    },
+    "YearsSinceLastPromotion": {
+      "mean": 2.188,
+      "std": 3.222,
+      "min": 0.0,
+      "max": 15.0
+    },
+    "YearsWithCurrManager": {
+      "mean": 4.123,
+      "std": 3.568,
+      "min": 0.0,
+      "max": 17.0
+    }
+  },
+  "attrition_rate_by_category": {
+    "Department": [
+      {
+        "name": "Sales",
+        "total": 446,
+        "left": 92,
+        "attrition_percentage": 20.63
+      },
+      {
+        "name": "Human Resources",
+        "total": 63,
+        "left": 12,
+        "attrition_percentage": 19.05
+      },
+      {
+        "name": "Research & Development",
+        "total": 961,
+        "left": 133,
+        "attrition_percentage": 13.84
+      }
+    ],
+    "JobRole": [
+      {
+        "name": "Sales Representative",
+        "total": 83,
+        "left": 33,
+        "attrition_percentage": 39.76
+      },
+      {
+        "name": "Laboratory Technician",
+        "total": 259,
+        "left": 62,
+        "attrition_percentage": 23.94
+      },
+      {
+        "name": "Human Resources",
+        "total": 52,
+        "left": 12,
+        "attrition_percentage": 23.08
+      },
+      {
+        "name": "Sales Executive",
+        "total": 326,
+        "left": 57,
+        "attrition_percentage": 17.48
+      },
+      {
+        "name": "Research Scientist",
+        "total": 292,
+        "left": 47,
+        "attrition_percentage": 16.1
+      },
+      {
+        "name": "Manufacturing Director",
+        "total": 145,
+        "left": 10,
+        "attrition_percentage": 6.9
+      },
+      {
+        "name": "Healthcare Representative",
+        "total": 131,
+        "left": 9,
+        "attrition_percentage": 6.87
+      },
+      {
+        "name": "Manager",
+        "total": 102,
+        "left": 5,
+        "attrition_percentage": 4.9
+      },
+      {
+        "name": "Research Director",
+        "total": 80,
+        "left": 2,
+        "attrition_percentage": 2.5
+      }
+    ],
+    "OverTime": [
+      {
+        "name": "Yes",
+        "total": 416,
+        "left": 127,
+        "attrition_percentage": 30.53
+      },
+      {
+        "name": "No",
+        "total": 1054,
+        "left": 110,
+        "attrition_percentage": 10.44
+      }
+    ],
+    "BusinessTravel": [
+      {
+        "name": "Travel_Frequently",
+        "total": 277,
+        "left": 69,
+        "attrition_percentage": 24.91
+      },
+      {
+        "name": "Travel_Rarely",
+        "total": 1043,
+        "left": 156,
+        "attrition_percentage": 14.96
+      },
+      {
+        "name": "Non-Travel",
+        "total": 150,
+        "left": 12,
+        "attrition_percentage": 8.0
+      }
+    ],
+    "Gender": [
+      {
+        "name": "Male",
+        "total": 882,
+        "left": 150,
+        "attrition_percentage": 17.01
+      },
+      {
+        "name": "Female",
+        "total": 588,
+        "left": 87,
+        "attrition_percentage": 14.8
+      }
+    ],
+    "MaritalStatus": [
+      {
+        "name": "Single",
+        "total": 470,
+        "left": 120,
+        "attrition_percentage": 25.53
+      },
+      {
+        "name": "Married",
+        "total": 673,
+        "left": 84,
+        "attrition_percentage": 12.48
+      },
+      {
+        "name": "Divorced",
+        "total": 327,
+        "left": 33,
+        "attrition_percentage": 10.09
+      }
+    ]
+  }
+}

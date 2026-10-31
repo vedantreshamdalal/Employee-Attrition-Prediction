@@ -1,0 +1,10 @@
+* text=auto
+*.pkl binary
+*.png binary
+*.jpg binary
+
+.venv/ export-ignore
+.pytest_cache/ export-ignore
+.terraform/ export-ignore
+ml/drift_report.json export-ignore
+**/__pycache__/ export-ignore

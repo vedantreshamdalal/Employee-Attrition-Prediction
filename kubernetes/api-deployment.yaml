@@ -1,0 +1,55 @@
+# Local image. Load it into Minikube before applying:
+# minikube image load employee-attrition-api:local
+# Do not apply this file if Terraform is already managing attrition-api.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: attrition-api
+  namespace: employee-attrition
+  labels:
+    app: attrition-api
+spec:
+  replicas: 1
+  selector:
+    match_labels:
+      app: attrition-api
+  template:
+    metadata:
+      labels:
+        app: attrition-api
+    spec:
+      containers:
+        - name: api
+          image: employee-attrition-api:local
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8000
+          env:
+            - name: MODEL_PATH
+              value: /app/ml/model.pkl
+            - name: DATA_PATH
+              value: /app/data/WA_Fn-UseC_-HR-Employee-Attrition.csv
+            - name: REFERENCE_PATH
+              value: /app/ml/reference_features.csv
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 3
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 25
+            periodSeconds: 20
+            timeoutSeconds: 3
+          resources:
+            requests:
+              cpu: 250m
+              memory: 512Mi
+            limits:
+              cpu: "1"
+              memory: 1Gi
